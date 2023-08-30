@@ -33,8 +33,7 @@ syn match     cpointOperator     display "\%(+\|-\|/\|*\|=\|\|>\|<\|%\)=\?"
 
 syn match     cpointOperator     display "&&\|||"
 
-" syn match     cpointDecNumber   display "\<[0-9][0-9_]*\%([iu]\%(size\|8\|16\|32\|64\|128\)\)\="
-syn match     cpointDecNumber   display "\<[0-9][0-9_]*\%\="
+syn match     cpointDecNumber   display "\<[0-9][0-9_]*\%([iu]\%(size\|8\|16\|32\|64\|128\)\)\="
 
 syn region cpointFoldBraces start="{" end="}" transparent fold
 

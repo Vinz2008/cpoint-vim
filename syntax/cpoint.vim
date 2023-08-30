@@ -20,7 +20,7 @@ syn keyword   cpointStorage     const
 syn match     cpointIdentifier  contains=cpointIdentifierPrime "\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" display contained
 syn match     cpointFuncName    "\%(r#\)\=\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" display contained
 
-syn keyword   cpointType        u8 u16 u32 u64 u128 float
+syn keyword   cpointType        u8 u16 u32 u64 u128 float double
 syn keyword   cpointType        i8 i16 i32 i64 i128
 
 syn keyword   cpointBoolean     true false
@@ -33,7 +33,8 @@ syn match     cpointOperator     display "\%(+\|-\|/\|*\|=\|\|>\|<\|%\)=\?"
 
 syn match     cpointOperator     display "&&\|||"
 
-syn match     cpointDecNumber   display "\<[0-9][0-9_]*\%([iu]\%(size\|8\|16\|32\|64\|128\)\)\="
+" syn match     cpointDecNumber   display "\<[0-9][0-9_]*\%([iu]\%(size\|8\|16\|32\|64\|128\)\)\="
+syn match     cpointDecNumber   display "\<[0-9][0-9_]*\%\="
 
 syn region cpointFoldBraces start="{" end="}" transparent fold
 
